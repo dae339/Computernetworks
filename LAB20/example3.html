@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример 3 - Изменение текста и цвета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Пример 3 - Обработка клика</h1>
+    
+
+    <p id="message">Нажмите на кнопку, чтобы изменить этот текст</p>
+    
+    
+    <button id="myButton">Нажми меня!</button>
+
+    <script>
+
+        const button = document.querySelector('#myButton');
+        const paragraph = document.querySelector('#message');
+
+
+        button.onclick = function() {
+
+            paragraph.textContent = 'Клик сработал!';
+            
+            paragraph.style.color = 'blue';
+        };
+    </script>
+</body>
+</html>
